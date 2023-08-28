@@ -28,19 +28,20 @@ const userSchema = new Schema(
         ] , 
         
         friends:[
-
+            //array of _id values  referencing User model(self-reference)
             {
                 type:Schema.Types.ObjectId,
-                ref: 'Friends'
+                ref: 'User'
             }
         ]
-        //array of _id values  referencing User model(self-reference)
+        
        
         }, 
         {
             toJSON: {
                 virtuals: true
-        }
+        }, 
+        id: false
     }
 )
 

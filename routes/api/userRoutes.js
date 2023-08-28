@@ -7,8 +7,8 @@ const {
     deleteUser,
     addThought,
     removeThought,
-    addComment,
-    removeComment,
+   // addComment,
+    //removeComment,
 } = require('../../controllers/userController');
 
 router.route('/').get(getUsers).post(createUser);
