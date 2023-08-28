@@ -7,7 +7,7 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
             minlength: 1,
-            maxlength: 280
+            max_length: 280
         },
         
         createdAt:{
@@ -34,7 +34,7 @@ const reactionSchema = new Schema(
         reactionBody: {
             type:String,
             required:true,
-            maxlength:280,
+            max_length:280,
         },
         username:{
             type:String,
@@ -54,6 +54,6 @@ const reactionSchema = new Schema(
     return this.reactions.length;
   });
 
-  const Thoughts = model('Thoughts', thoughtSchema);
+  const Thoughts = model('Thought', thoughtSchema);
 
   module.exports = Thoughts;
