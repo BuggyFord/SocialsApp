@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 
 const reactionSchema = new Schema(
@@ -44,7 +44,13 @@ const thoughtSchema = new Schema(
         },
         //array of _id values  referencing User model(self-reference)
         reactions:[reactionSchema]
-    }
+    },
+    {
+        toJSON: {
+          getters: true,
+        },
+        id: false,
+      }
 );
 
 //Schema Settings
@@ -54,6 +60,6 @@ const thoughtSchema = new Schema(
     return this.reactions.length;
   });
 
-  const Thoughts = model('Thoughts', thoughtSchema);
+  const Thought = model('thought', thoughtSchema);
 
-  module.exports = Thoughts;
+  module.exports = Thought;
