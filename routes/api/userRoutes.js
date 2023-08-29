@@ -11,11 +11,11 @@ const {
 } = require('../../controllers/userController');
 
 router.route('/')
-.get(getUsers)
-.post(createUser);
+    .get(getUsers)
+    .post(createUser);
 //  the above is fancy one-liner for the below code
-router.get('/', getUsers);
-router.post('/', createUser)
+//router.get('/', getUsers);
+//router.post('/', createUser)
 
 router.route('/:userId').get(getSingleUser).delete(deleteUser).put(updateUser);
 
