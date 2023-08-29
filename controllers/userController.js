@@ -90,13 +90,26 @@ const userController = {
             if (!currentUser) {
                 return res.status(404).json({message:'No user with that id!'});
             }
-            res.status(200).json();
+            res.status(200).json(currentUser);
         } catch(err) {
             res.status(500).json(err)
         }
     },
     async deleteFriend(req, res) {
         // route Logic
+        try{
+            let currentUser = await User.findOneAndDelete(
+                {_id: req.params.userId},
+                { $pull: { friends: req.params.friendId}},
+                { new:true}
+            )
+            if(!currentUser) {
+                return res.status(400).json({message: 'No user with tha id found!'});
+            }
+            res.status(200).json(currentUser);
+        } catch(err) {
+            res.status(500).json(err)
+        }
 
     },
 }
