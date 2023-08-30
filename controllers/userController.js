@@ -98,7 +98,7 @@ const userController = {
     async deleteFriend(req, res) {
         // route Logic
         try{
-            let currentUser = await User.findOneAndDelete(
+            let currentUser = await User.findOneAndUpdate(
                 {_id: req.params.userId},
                 { $pull: { friends: req.params.friendId}},
                 { new:true}
