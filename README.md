@@ -12,13 +12,13 @@ This is a social media that utilizes mongodb and crud operations.
 
 * [Installation](#installation)
 
-* [Usage](#usage)
+*[VideoWalkthrough](#video)
 
 * [License](#license)
 
 * [Contributing](#contributing)
 
-* [Tests](#tests)
+
 
 * [Questions](#questions)
 
@@ -30,7 +30,9 @@ To install necessary dependencies, run the following command:
 npm run index
 ```
 
-## Usage
+
+##
+Link to video presentation of https://drive.google.com/file/d/1jdcBwOWtbJdDS-Bt8py-FkOUEtzYPZbf/view?usp=sharing
 
 
 
@@ -42,13 +44,7 @@ npm run index
 
 me
 
-## Tests
 
-To run tests, run the following command:
-
-```
---
-```
 
 ## Questions
 
